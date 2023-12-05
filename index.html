@@ -2,48 +2,43 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Formulario de Registro Electoral</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario Responsive con Tailwind CSS</title>
+  <!-- CDN de Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body class="bg-gray-200">
-
-<h2 class="text-4xl text-center border-b-2 border-red-900">Registro Electoral</h2>
-
-<form action="/registro" method="post" class="px-11">
-  <div class="form-group pt-3 flex justify-between">
-    <label for="nombre">Nombre Completo:</label>
-    <input type="text" id="nombre" name="nombre" required class="border-2 border-black">
+<body class="bg-gray-100 p-4">
+  <div class="max-w-md mx-auto bg-white rounded-lg overflow-hidden shadow-md p-6">
+    <h2 class="text-2xl font-bold mb-4">Formulario</h2>
+    <form name="contact" method="POST" data-netlify="true">
+      <div class="mb-4">
+        <label for="nombre" class="block text-gray-700 font-bold mb-2">Nombre Completo</label>
+        <input type="text" id="nombre" name="nombre" class="w-full border rounded-md py-2 px-3 text-gray-700 focus:outline-none focus:border-blue-500">
+      </div>
+      <div class="mb-4">
+        <label for="celular" class="block text-gray-700 font-bold mb-2">Número de Celular</label>
+        <input type="tel" id="celular" name="celular" class="w-full border rounded-md py-2 px-3 text-gray-700 focus:outline-none focus:border-blue-500">
+      </div>
+      <div class="mb-4">
+        <label for="direccion" class="block text-gray-700 font-bold mb-2">Dirección</label>
+        <input type="text" id="direccion" name="direccion" class="w-full border rounded-md py-2 px-3 text-gray-700 focus:outline-none focus:border-blue-500">
+      </div>
+      <div class="mb-4">
+        <label for="codigo-postal" class="block text-gray-700 font-bold mb-2">Código Postal</label>
+        <input type="text" id="codigo-postal" name="codigo-postal" class="w-full border rounded-md py-2 px-3 text-gray-700 focus:outline-none focus:border-blue-500">
+      </div>
+      <div class="mb-4">
+        <label for="curp" class="block text-gray-700 font-bold mb-2">CURP</label>
+        <input type="text" id="curp" name="curp" class="w-full border rounded-md py-2 px-3 text-gray-700 focus:outline-none focus:border-blue-500">
+      </div>
+      <div class="mb-4">
+        <label for="seccion-electoral" class="block text-gray-700 font-bold mb-2">Sección Electoral</label>
+        <input type="text" id="seccion-electoral" name="seccion-electoral" class="w-full border rounded-md py-2 px-3 text-gray-700 focus:outline-none focus:border-blue-500">
+      </div>
+      <div class="text-center">
+        <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Enviar</button>
+      </div>
+    </form>
   </div>
-
-  <div class="form-group pt-6 flex justify-between">
-    <label for="direccion">Dirección:</label>
-    <input type="text" id="direccion" name="direccion" required class="border-2 border-black">
-  </div>
-
-  <div class="form-group pt-3 flex justify-between">
-    <label for="codigo-postal">Código Postal:</label>
-    <input type="text" id="codigo-postal" name="codigo-postal" required class="border-2 border-black">
-  </div>
-
-  <div class="form-group pt-3 flex justify-between">
-    <label for="clave-elector">Clave de Elector:</label>
-    <input type="text" id="clave-elector" name="clave-elector" required class="border-2 border-black">
-  </div>
-
-  <div class="form-group pt-3 flex justify-between">
-    <label for="telefono">Número Telefónico:</label>
-    <input type="tel" id="telefono" name="telefono" required class="border-2 border-black">
-  </div>
-
-  <div class="form-group pt-3 flex justify-between">
-    <label class="text-lg" for="seccion-electoral">Sección Electoral:</label>
-    <input type="text" id="seccion-electoral" name="seccion-electoral" required class="border-2 border-black">
-  </div>
-  <div data-netlify-recaptcha="true"></div>
-  <div class="flex items-center justify-center">
-    <input class="mt-6 px-4 py-2 rounded-lg border-2 border-red-900 cursor-pointer" type="submit" value="Enviar">
-  </div>
-</form>
-
 </body>
 </html>
