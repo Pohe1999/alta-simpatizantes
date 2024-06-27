@@ -62,6 +62,189 @@
             <input type="file" id="imagen-3" name="imagen-3" accept="image/*" required class="w-full border-2 border-red-900 rounded-lg py-2 px-4"><br><br>
         </div>
       </section>
+      <fieldset class="border-2 border-red-900 rounded-lg py-2 px-4 mb-4">
+        <legend>Datos personales de la primer propuesta</legend>
+
+      <div class="mb-4">
+      <label for="nombre" class="block text-left mb-2">Nombre(s):</label>
+        <input type="text" id="nombre" name="nombre" required class="w-full border-2 border-red-900 rounded-lg py-2 px-4">
+      </div>
+
+      <div class="mb-4">
+      <label for="apaterno" class="block text-left mb-2">Apellido Parteno:</label>
+        <input type="text" id="apaterno" name="apaterno" required class="w-full border-2 border-red-900 rounded-lg py-2 px-4">
+      </div>
+
+      <div class="mb-4">
+      <label for="amaterno" class="block text-left mb-2">Apellido Materno:</label>
+        <input type="text" id="amaterno" name="amaterno" required class="w-full border-2 border-red-900 rounded-lg py-2 px-4">
+      </div>
+
+      <div class="mb-4">
+      <label for="curp" class="block text-left mb-2">CURP:</label>
+         <input type="text" minlength="18" maxlength="18" id="curp" name="curp" required class="w-full border-2 border-red-900 rounded-lg py-2 px-4" value=""  onkeyup="javascript:this.value=this.value.toUpperCase();">
+      </div>
+
+      <div class="mb-4">
+        <label for="imagen_ine1" class="block text-left">Fotografia de INE (frente):</label><br>
+        <input type="file" id="imagen_ine1" name="imagen_ine1" accept="image/*" required class="w-full border-2 border-red-900 rounded-lg py-2 px-4"><br><br>
+      </div>
+
+      <div class="mb-4">
+        <label for="imagen_ine2" class="block text-left">Fotografia de INE (reverso):</label><br>
+        <input type="file" id="imagen_ine2" name="imagen_ine2" accept="image/*" required class="w-full border-2 border-red-900 rounded-lg py-2 px-4"><br><br>
+      </div>
+
+      <div class="mb-4">
+        <label for="imagen_persona" class="block text-left">Fotografia de la persona:</label><br>
+        <input type="file" id="imagen_persona" name="imagen_persona" accept="image/*" required class="w-full border-2 border-red-900 rounded-lg py-2 px-4"><br><br>
+      </div>
+
+      <fieldset class="border-2 border-red-900 rounded-lg py-2 px-4 mb-4">
+
+        <legend>Dirección</legend>
+        <div class="mb-4">
+            <label for="calle" class="block text-left mb-2">Calle:</label>
+            <input type="text" id="calle" name="calle" required class="w-full border-2 border-red-900 rounded-lg py-2 px-4">
+          </div>
+
+          <div class="mb-4 flex justify-center">
+            <div class="mb-4">
+                <label for="next" class="block text-left mb-2">N° Ext:</label>
+                <input type="text" id="next" name="next" required class="w-full border-2 border-red-900 rounded-lg py-2 px-4">
+            </div>
+            <div class="mb-4 ms-4">
+                <label for="nint" class="block text-left mb-2">N° Int:</label>
+                <input type="text" id="nint" name="nint" required class="w-full border-2 border-red-900 rounded-lg py-2 px-4">
+            </div>
+            <div class="mb-4 ms-4">
+                <label for="ncasa" class="block text-left mb-2">N° Casa:</label>
+                <input type="text" id="ncasa" name="ncasa" required class="w-full border-2 border-red-900 rounded-lg py-2 px-4">
+            </div>
+          </div>
+          <div class="mb-4">
+            <label for="codigop" class="block text-left mb-2">Código Postal:</label>
+            <input type="tel" id="codigop" name="codigop" required class="w-full border-2 border-red-900 rounded-lg py-2 px-4">
+          </div>
+          <div class="mb-4">
+            <label for="colonia" class="block text-left mb-2">Colonia:</label>
+            <input type="text" id="colonia" name="colonia" required class="w-full border-2 border-red-900 rounded-lg py-2 px-4">
+          </div>
+
+
+      </fieldset>
+
+      <fieldset class="border-2 border-red-900 rounded-lg py-2 px-4 mb-4">
+        <legend>Datos de contacto</legend>
+        <div class="mb-4">
+            <label for="telefono" class="block text-left mb-2">Teléfono 1:</label>
+            <input type="tel" id="telefono" name="telefono" required class="w-full border-2 border-red-900 rounded-lg py-2 px-4">
+          </div>
+
+          <div class="mb-4">
+            <label for="telefono2" class="block text-left mb-2">Teléfono 2:</label>
+            <input type="tel" id="telefono2" name="telefono2" required class="w-full border-2 border-red-900 rounded-lg py-2 px-4">
+          </div>
+
+          <div class="mb-4">
+            <label for="correo" class="block text-left mb-2">Correo Electrónico:</label>
+            <input type="email" id="correo" name="correo" class="w-full border-2 border-red-900 rounded-lg py-2 px-4">
+          </div>
+      </fieldset>
+    </fieldset>
+
+
+
+    <fieldset class="border-2 border-red-900 rounded-lg py-2 px-4 mb-4">
+        <legend>Datos personales de la segunda propuesta</legend>
+
+      <div class="mb-4">
+      <label for="nombre2" class="block text-left mb-2">Nombre(s):</label>
+        <input type="text" id="nombre2" name="nombre2" required class="w-full border-2 border-red-900 rounded-lg py-2 px-4">
+      </div>
+
+      <div class="mb-4">
+      <label for="apaterno2" class="block text-left mb-2">Apellido Parteno:</label>
+        <input type="text" id="apaterno2" name="apaterno2" required class="w-full border-2 border-red-900 rounded-lg py-2 px-4">
+      </div>
+
+      <div class="mb-4">
+      <label for="amaterno2" class="block text-left mb-2">Apellido Materno:</label>
+        <input type="text" id="amaterno2" name="amaterno2" required class="w-full border-2 border-red-900 rounded-lg py-2 px-4">
+      </div>
+
+      <div class="mb-4">
+      <label for="curp2" class="block text-left mb-2">CURP:</label>
+         <input type="text" minlength="18" maxlength="18" id="curp2" name="curp2" required class="w-full border-2 border-red-900 rounded-lg py-2 px-4" value=""  onkeyup="javascript:this.value=this.value.toUpperCase();">
+      </div>
+
+      <div class="mb-4">
+        <label for="imagen_ine12" class="block text-left">Fotografia de INE (frente):</label><br>
+        <input type="file" id="imagen_ine12" name="imagen_ine12" accept="image/*" required class="w-full border-2 border-red-900 rounded-lg py-2 px-4"><br><br>
+      </div>
+
+      <div class="mb-4">
+        <label for="imagen_ine22" class="block text-left">Fotografia de INE (reverso):</label><br>
+        <input type="file" id="imagen_ine22" name="imagen_ine22" accept="image/*" required class="w-full border-2 border-red-900 rounded-lg py-2 px-4"><br><br>
+      </div>
+
+      <div class="mb-4">
+        <label for="imagen_persona2" class="block text-left">Fotografia de la persona:</label><br>
+        <input type="file" id="imagen_persona2" name="imagen_persona2" accept="image/*" required class="w-full border-2 border-red-900 rounded-lg py-2 px-4"><br><br>
+      </div>
+
+      <fieldset class="border-2 border-red-900 rounded-lg py-2 px-4 mb-4">
+
+        <legend>Dirección</legend>
+        <div class="mb-4">
+            <label for="calle2" class="block text-left mb-2">Calle:</label>
+            <input type="text" id="calle2" name="calle2" required class="w-full border-2 border-red-900 rounded-lg py-2 px-4">
+          </div>
+
+          <div class="mb-4 flex justify-center">
+            <div class="mb-4">
+                <label for="next2" class="block text-left mb-2">N° Ext:</label>
+                <input type="text" id="next2" name="next2" required class="w-full border-2 border-red-900 rounded-lg py-2 px-4">
+            </div>
+            <div class="mb-4 ms-4">
+                <label for="nint2" class="block text-left mb-2">N° Int:</label>
+                <input type="text" id="nint2" name="nint2" required class="w-full border-2 border-red-900 rounded-lg py-2 px-4">
+            </div>
+            <div class="mb-4 ms-4">
+                <label for="ncasa2" class="block text-left mb-2">N° Casa:</label>
+                <input type="text" id="ncasa2" name="ncasa2" required class="w-full border-2 border-red-900 rounded-lg py-2 px-4">
+            </div>
+          </div>
+          <div class="mb-4">
+            <label for="codigop2" class="block text-left mb-2">Código Postal:</label>
+            <input type="tel" id="codigop2" name="codigop2" required class="w-full border-2 border-red-900 rounded-lg py-2 px-4">
+          </div>
+          <div class="mb-4">
+            <label for="colonia2" class="block text-left mb-2">Colonia:</label>
+            <input type="text" id="colonia2" name="colonia2" required class="w-full border-2 border-red-900 rounded-lg py-2 px-4">
+          </div>
+
+
+      </fieldset>
+
+      <fieldset class="border-2 border-red-900 rounded-lg py-2 px-4 mb-4">
+        <legend>Datos de contacto</legend>
+        <div class="mb-4">
+            <label for="telefono2" class="block text-left mb-2">Teléfono 1:</label>
+            <input type="tel" id="telefono2" name="telefono2" required class="w-full border-2 border-red-900 rounded-lg py-2 px-4">
+          </div>
+
+          <div class="mb-4">
+            <label for="telefono22" class="block text-left mb-2">Teléfono 2:</label>
+            <input type="tel" id="telefono22" name="telefono22" required class="w-full border-2 border-red-900 rounded-lg py-2 px-4">
+          </div>
+
+          <div class="mb-4">
+            <label for="correo2" class="block text-left mb-2">Correo Electrónico:</label>
+            <input type="email" id="correo2" name="correo2" class="w-full border-2 border-red-900 rounded-lg py-2 px-4">
+          </div>
+      </fieldset>
+    </fieldset>
       <input type="submit" value="Enviar" class="bg-red-900 text-white py-2 px-4 rounded-lg text-xl w-full mt-4">
     </form>
   </div>
