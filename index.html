@@ -6,37 +6,65 @@
   <title>Formulario de Registro</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100 flex justify-center items-center h-screen">
-  <div class="bg-white p-6 rounded-lg shadow-md w-full sm:w-96">
-    <h1 class="text-3xl font-semibold mb-4">Propuestas de lecherias Tecámac</h1>
-    <h2 class="text-xl mb-6">Escribe la informacion solicitada correctamente</h2>
+<body class="bg-gray-100 flex justify-center items-center min-h-screen">
+  <div class="bg-white p-6 rounded-lg shadow-md w-full max-w-lg">
+    <h1 class="text-3xl font-semibold mb-4 border-b-2 border-red-900 shadow-lg">Propuestas de lecherias Tecámac</h1>
+    <h2 class="text-md mb-6">Escribe la informacion solicitada correctamente</h2>
     <form action="/submit" method="post" data-netlify="true">
-      <div class="mb-4">
-        <label for="nombre" class="block text-left mb-2">Sector:</label>
-        <input type="text" id="nombre" name="nombre" required class="w-full border-2 border-red-900 rounded-lg py-2 px-4">
-      </div>
-      <div class="mb-4">
-        <label for="telefono" class="block text-left mb-2">Teléfono:</label>
-        <input type="tel" id="telefono" name="telefono" required class="w-full border-2 border-red-900 rounded-lg py-2 px-4">
-      </div>
-      <div class="mb-4">
-        <label for="seccion" class="block text-left mb-2">Sección:</label>
-        <input type="number" id="seccion" name="seccion" required class="w-full border-2 border-red-900 rounded-lg py-2 px-4">
-      </div>
-      <div class="mb-4">
-        <label for="correo" class="block text-left mb-2">Correo Electrónico:</label>
-        <input type="email" id="correo" name="correo" class="w-full border-2 border-red-900 rounded-lg py-2 px-4">
-      </div>
-      <div class="mb-4">
-        <label for="fecha" class="block text-left mb-2">Fecha de Ingreso:</label>
-        <input type="date" id="fecha" name="fecha" required class="w-full border-2 border-red-900 rounded-lg py-2 px-4">
-      </div>
-      <div class="mb-4">
-        <label for="imagen" class="block text-left">Fotografia de INE:</label><br>
-        <input type="file" id="imagen" name="imagen" accept="image/*" required class="w-full border-2 border-red-900 rounded-lg py-2 px-4"><br><br>
-      </div>
-      <input type="submit" value="Enviar" class="bg-red-900 text-white py-2 px-4 rounded-lg text-xl">
+      <section name="direccion" class="border-2 p-4 rounded-md border-red-900">
+        <div class="bg-red-900 px-2 py-1 rounded-md text-white flex justify-center items-center mb-4">
+          <h3 class="font-semibold text-center">Informacion sobre la ubicacion de la lecheria</h3>
+        </div>
+        <div class="mb-4">
+          <label for="nombre" class="block text-left mb-2 font-semibold">Sector:</label>
+          <select name="select" id="select-sectores" required class="w-full border-2 border-red-900 rounded-lg py-2 px-4">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+          </select>
+        </div>
+        <div class="mb-4">
+          <label for="direccion" class="block text-left mb-2 font-semibold">Direccion:</label>
+          <input type="tel" id="direccion" name="direccion" required class="w-full border-2 border-red-900 rounded-lg py-2 px-4">
+        </div>
+        <div class="mb-4">
+          <label for="codigo-postal" class="block text-left mb-2 font-semibold">Codigo postal:</label>
+          <input type="text" id="codigo-postal" name="codigo-postal" required class="w-full border-2 border-red-900 rounded-lg py-2 px-4">
+        </div>
+        <div class="mb-4">
+          <label for="colonia" class="block text-left mb-2 font-semibold">Colonia:</label>
+          <input type="text" id="colonia" name="colonia" class="w-full uppercase border-2 border-red-900 rounded-lg py-2 px-4">
+        </div>
+        <div class="mb-4">
+          <label for="fecha" class="block text-left mb-2 font-semibold">Ingresa la ubicicacion de google maps:</label>
+          <label class="text-sm">Comparte la ubicación desde google maps y pégala aquí como en el siguiente ejemplo: <br><span class="font-bold">https://maps.app.goo.gl/ycV5DLqQ26cCTT8Q6</span></label>
+          <input type="url" id="ubicacion-google" name="ubicacion-google" required class="w-full border-2 border-red-900 rounded-lg py-2 px-4 mt-2">
+        </div>
+        <div class="mb-4">
+            <label for="imagen-1" class="block text-left">Ingresa una foto de la propuesta:</label><br>
+            <input type="file" id="imagen-1" name="imagen-1" accept="imagen-1/*" required class="w-full border-2 border-red-900 rounded-lg py-2 px-4"><br><br>
+        </div>
+        <div class="mb-4">
+            <label for="imagen-2" class="block text-left">Ingresa una foto de la propuesta <span class="font-semibold">(vista de derecha):</span></label><br>
+            <input type="file" id="imagen-2" name="imagen-2" accept="imagen-2/*" required class="w-full border-2 border-red-900 rounded-lg py-2 px-4"><br><br>
+        </div>
+        <div class="mb-4">
+            <label for="imagen-3" class="block text-left">Ingresa una foto de la propuesta <span class="font-semibold">(vista de derecha):</span></label><br>
+            <input type="file" id="imagen-3" name="imagen-3" accept="imagen-3/*" required class="w-full border-2 border-red-900 rounded-lg py-2 px-4"><br><br>
+        </div>
+      </section>
+      <input type="submit" value="Enviar" class="bg-red-900 text-white py-2 px-4 rounded-lg text-xl w-full mt-4">
     </form>
   </div>
 </body>
 </html>
+
