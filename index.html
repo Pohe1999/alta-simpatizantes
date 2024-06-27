@@ -44,7 +44,7 @@
           <label for="colonia-lecheria" class="block text-left mb-2 font-semibold">Colonia:</label>
           <input type="text" id="colonia-lecheria" name="colonia-lecheria" class="w-full uppercase border-2 border-red-900 rounded-lg py-2 px-4">
         </div>
-        <!-- <div class="mb-4">
+        <div class="mb-4">
           <label for="fecha" class="block text-left mb-2 font-semibold">Ingresa la ubicicacion de google maps:</label>
           <label class="text-sm">Comparte la ubicación desde google maps y pégala aquí como en el siguiente ejemplo: <br><span class="font-bold">https://maps.app.goo.gl/ycV5DLqQ26cCTT8Q6</span></label>
           <input type="url" id="ubicacion-google" name="ubicacion-google" required class="w-full border-2 border-red-900 rounded-lg py-2 px-4 mt-2">
@@ -244,33 +244,33 @@
             <input type="email" id="correo2" name="correo2" class="w-full border-2 border-red-900 rounded-lg py-2 px-4">
           </div>
       </fieldset>
-    </fieldset> -->
+    </fieldset>
       <input type="submit" value="Enviar" class="bg-red-900 text-white py-2 px-4 rounded-lg text-xl w-full mt-4">
     </form>
   </div>
 </body>
     <script>
         const handleSubmit = (event) => {
-          event.preventDefault();
-        
-          const myForm = event.target;
-          const formData = new FormData(myForm);
+            event.preventDefault();
           
-          fetch("/", {
-            method: "POST",
-            headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: new URLSearchParams(formData).toString(),
-          })
-            .then(() => {
-              alert("Gracias, tu informacion ha sido recibida");
-              location.reload(); // Recarga la página
+            const myForm = event.target;
+            const formData = new FormData(myForm);
+            
+            fetch("/", {
+              method: "POST",
+              headers: { "Content-Type": "application/x-www-form-urlencoded" },
+              body: new URLSearchParams(formData).toString(),
             })
-            .catch((error) => alert(error));
-        };
-        
-        document
-          .querySelector("form")
-          .addEventListener("submit", handleSubmit);
-
+              .then(() => {
+                alert("Gracias, tu informacion ha sido recibida");
+                location.reload(); // Recarga la página
+              })
+              .catch((error) => alert(error));
+          };
+          
+          document
+            .querySelector("form")
+            .addEventListener("submit", handleSubmit);
+  
     </script>
 </html>
