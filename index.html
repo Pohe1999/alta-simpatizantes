@@ -251,23 +251,26 @@
 </body>
     <script>
         const handleSubmit = (event) => {
-            event.preventDefault();
+          event.preventDefault();
+        
+          const myForm = event.target;
+          const formData = new FormData(myForm);
           
-            const myForm = event.target;
-            const formData = new FormData(myForm);
-            
-            fetch("/", {
-              method: "POST",
-              headers: { "Content-Type": "application/x-www-form-urlencoded" },
-              body: new URLSearchParams(formData).toString(),
+          fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: new URLSearchParams(formData).toString(),
+          })
+            .then(() => {
+              alert("Thank you for your submission");
+              location.reload(); // Recarga la página
             })
-              .then(() => alert("Gracias"))
-              .catch((error) => alert(error));
-          };
-          
-          document
-            .querySelector("form")
-            .addEventListener("submit", handleSubmit);
-          
+            .catch((error) => alert(error));
+        };
+        
+        document
+          .querySelector("form")
+          .addEventListener("submit", handleSubmit);
+
     </script>
 </html>
